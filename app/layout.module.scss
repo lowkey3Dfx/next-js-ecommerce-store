@@ -1,0 +1,73 @@
+.header {
+  margin-right: auto;
+  nav {
+    position: fixed;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    background-color: rgba(253, 253, 253, 0.193);
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    margin: 0 0 16px 0;
+    padding: 16px 32px;
+    display: flex;
+    width: 100vw;
+
+    & a + a,
+    span + a {
+      color: rgb(255, 255, 255);
+      margin-left: 4px;
+      text-decoration: none;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+      transition: background-color 600ms ease-out 50ms;
+      border: 2px solid rgba(0, 0, 0, 0.715);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.754);
+      min-width: 98px;
+      text-align: center;
+    }
+    a:hover {
+      background-color: #178952d5;
+      border: rgba(0, 0, 0, 0.614) 2px solid;
+    }
+
+    & div {
+      margin-right: auto;
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+.cart {
+  margin-left: auto;
+}
+
+.main {
+  & h1 {
+    color: rgb(255, 255, 255);
+    padding-top: 112px;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+}
+
+.Hero {
+  display: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  color: white;
+  background: rgb(255, 127, 80);
+  background: linear-gradient(0deg, coral 1%, rgba(0, 0, 0, 1) 1%);
+  border-radius: 2px;
+  margin: 100px 0 0 0;
+  padding: 32px 32px;
+  display: flex;
+  height: 320px;
+}
