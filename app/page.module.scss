@@ -3,3 +3,31 @@
   width: 200px;
   margin: 0 8px;
 }
+
+.counter {
+  display: flex;
+
+  margin: 16px;
+
+  & h3 {
+    margin: 0;
+  }
+
+  & input {
+    font-size: 1rem;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    padding: 4px;
+  }
+
+  & button {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 2px;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+  }
+}

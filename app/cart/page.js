@@ -8,6 +8,7 @@ export default function productsCart() {
       <h1>Shopping Cart</h1>
       <div className={styles.shoppingCartCard}>
         <img src="/#" alt="Product inside cart" />
+
         <Counter className={styles.counter} />
       </div>
     </div>

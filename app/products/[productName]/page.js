@@ -15,7 +15,7 @@ export default function ProductPage(props) {
     notFound();
   }
   return (
-    <div>
+    <div className={styles.singlePageProduct}>
       <h1>
         {/* creating Product Name and capitalizing first letter */}
         {props.params.productName.charAt(0).toUpperCase() +

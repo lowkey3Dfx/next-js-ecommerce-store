@@ -47,3 +47,18 @@
     }
   }
 }
+
+.singlePageProduct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 72px;
+
+  & h1 {
+    margin-top: 0;
+  }
+
+  & p {
+    margin: 0;
+    padding: 0 16px 16px 16px;
+  }
+}
