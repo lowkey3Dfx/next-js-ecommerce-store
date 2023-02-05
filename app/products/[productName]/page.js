@@ -4,6 +4,8 @@ import { products } from '../../../database/products';
 import Counter from '../../Counter';
 import styles from '../page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 // ProductPage because single Product page
 export default function ProductPage(props) {
   /* find single product name */

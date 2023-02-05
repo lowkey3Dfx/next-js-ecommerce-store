@@ -31,3 +31,26 @@
     height: 40px;
   }
 }
+
+.cookieBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  background-color: rgba(253, 253, 253, 0.751);
+  backdrop-filter: blur(5px);
+  padding: 8px 32px;
+
+  width: 100vw;
+
+  & button {
+    padding: 16px;
+  }
+  & p {
+    margin: 4px 0 12px 0;
+  }
+}

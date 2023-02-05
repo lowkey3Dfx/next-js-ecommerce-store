@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { products } from '../database/products';
 import homeIcon from '../public/house.png';
 import cartIcon from '../public/shopping-cart-icon.png';
-import productsCart from './cart/page';
+import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
 
 export default function RootLayout({ children }) {
@@ -50,6 +50,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <div className={styles.Hero}>{children}</div>
+        <CookieBanner />
         <footer className={styles.footer}>
           <h1>This is the footer Section</h1>
         </footer>
