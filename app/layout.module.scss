@@ -15,23 +15,22 @@
 
     & a + a,
     span + a {
-      color: rgb(255, 255, 255);
+      color: rgba(255, 255, 255, 0.644);
+      transition: color 600ms ease-out 50ms;
       margin-left: 4px;
-      text-decoration: none;
-      box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-      transition: background-color 600ms ease-out 50ms;
+      background-color: rgba(0, 0, 0, 0.634);
       border: 2px solid rgba(0, 0, 0, 0.715);
-      font-weight: 600;
-      font-size: 14px;
       padding: 8px;
-      border-radius: 20px;
-      background-color: rgba(0, 0, 0, 0.754);
       min-width: 98px;
       text-align: center;
+      font-weight: 600;
+      font-size: 12px;
+      text-decoration: none;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+      border-radius: 18px;
     }
     a:hover {
-      background-color: #178952d5;
-      border: rgba(0, 0, 0, 0.614) 2px solid;
+      color: white;
     }
 
     & div {
@@ -49,9 +48,9 @@
 .main {
   & h1 {
     color: rgb(255, 255, 255);
-    padding-top: 112px;
-    padding-bottom: 20px;
-    margin: 0;
+    padding-top: 98px;
+
+    margin: 0 0 10px 0;
   }
 }
 
@@ -69,5 +68,5 @@
   margin: 100px 0 0 0;
   padding: 32px 32px;
   display: flex;
-  height: 320px;
+  height: 300px;
 }
