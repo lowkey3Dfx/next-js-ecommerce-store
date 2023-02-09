@@ -1,38 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Idea:
 
-## Getting Started
+- Product visualisation solutions for eCommerce
+- 3D Product Models for eCommerce
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Products / Solutions / Items
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Model
+- Render
+- Animate
+- Visualize / Visualise Product ( prototype visualisation )
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Required Pages:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- ProductsPage ( all products are listed )
+  - ProductsPage
+    - Each product needs to be contained in an anchor element a link with an attribute of:
+         <Link data-test-id=”product-<product id>” /> 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Header ( showing all products and Cart )
+- A Page for each single product
 
-## Learn More
+1. Modeling
+2. Rendering
+3. Modeling+Rendering
+4. Animation
+5. Product-visualisation
 
-To learn more about Next.js, take a look at the following resources:
+- CartPage
+- CheckoutPage
+- ThankYouPage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Text for website
 
-## Deploy on Vercel
+- 3D technology respresents the cutting edge of multimedia marketing
+- Improvements in image capturing and modeling, virtual showrooms, and computer vision will make VR andAR more efficient and more effective. These trends and other will help make 3D a critical part of future eCommerce.
+- Developing 3D marketing materials: VR and AR can be used in your marketing to tell your brand’s story, showcase your products and create promotional content. However you need to tell a great story.
+- 3D Applications for Product Development, Sales, and Revenue Streams
+- 3D Can Accelerate Product Development
+- Use 3D Visualization solutions to transform your 2D product images into interactive shopping experiences that lead to increased sales.
+- AR You Ready?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+online shopping experience that customers love
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## Terminology
+
+End-to-End Ecommerce Services ( E2E )
+
+---
+
+## Pricing
+
+Product price without currency needs to be directly inside an element with HTML attribute data-test-id=”product-price”
+
+Use: _<h3 data-test-id=”product-price” ></h3>_
+
+- modeling : 29
+- rendering: 69
+- Modeling + Rendering : 129
+- animation : 169
+- Product visualisation : 229
+
+I’m selling Product Visualisation Solutions for eCommerce. Just in case you are a developer or entrepeneur, and you are currently building a eCommerce store, you want to consider the services provided on this website. Including the creation of 3D Models of your product. Rendering with photorealistic textures and environment. Additionally you can choose to animate your product and with that purchase a Product Video. Or you go fullstack and get the full Product Visualisation experience including Package and Logo Design.

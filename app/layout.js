@@ -2,9 +2,10 @@ import './global.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { products } from '../database/products';
-import homeIcon from '../public/house.png';
+import homeIcon from '../public/Logo.png';
 import cartIcon from '../public/shopping-cart-icon.png';
 import CookieBanner from './CookieBanner';
+import Footer from './Footer';
 import styles from './layout.module.scss';
 
 export default function RootLayout({ children }) {
@@ -19,8 +20,8 @@ export default function RootLayout({ children }) {
                 <Image
                   src={homeIcon}
                   alt="Home Button"
-                  width="28"
-                  height="28"
+                  width="30"
+                  height="30"
                 />
               </Link>
 
@@ -51,9 +52,7 @@ export default function RootLayout({ children }) {
         </header>
         <div className={styles.Hero}>{children}</div>
         <CookieBanner />
-        <footer className={styles.footer}>
-          <h1>This is the footer Section</h1>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
