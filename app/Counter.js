@@ -7,7 +7,9 @@ export default function Counter() {
 
   return (
     <div className={styles.addToCartComponent}>
-      <h3>Amount:</h3>
+      <div className={styles.h3Header}>
+        <h3>Amount:</h3>
+      </div>
       <div className={styles.counter}>
         <button onClick={() => setCount(count - 1)}> - </button>
         <input placeholder="0" value={count} />

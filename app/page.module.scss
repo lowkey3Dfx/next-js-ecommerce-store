@@ -1,22 +1,26 @@
 .addToCartComponent {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  max-width: 148px;
+  align-items: center;
+  max-width: auto;
   max-height: 128px;
-  margin: 8px;
+  margin: 10px 0 0 0;
   padding: 8px;
   gap: 4px;
-  background-color: rgba(0, 0, 0, 0.591);
+  background-color: #38369a58;
   backdrop-filter: blur(5px);
   border-radius: 8px;
 
-  & h3 {
-    color: white;
-    font-size: 0.9rem;
-    margin: 0;
-    padding-left: 4px;
-    font-weight: 200;
+  .h3Header {
+    margin-right: 66px;
+
+    & h3 {
+      color: rgb(36, 36, 36);
+      font-size: 0.9rem;
+      margin: 0;
+
+      font-weight: 200;
+    }
   }
 
   .counter {
@@ -43,10 +47,13 @@
 
   .addToCart {
     & button {
+      color: white;
+      border: none;
+      border-radius: 4px;
       width: 128px;
       height: 40px;
       font-size: 1rem;
-
+      background-color: #38369a;
       text-align: center;
 
       margin: 2px;
@@ -92,33 +99,50 @@
 
 .mainBody {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
   min-height: 800px;
 
-  & h1 {
-    font-size: 5.2rem;
-    background-image: linear-gradient(
-      60deg,
-      #f79533,
-      #f37055,
-      #ef4e7b,
-      #a166ab,
-      #5073b8,
-      #1098ad,
-      #07b39b,
-      #6fba82
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 0;
-    margin: 8px;
-  }
-  .image {
-    max-height: 80px;
-    max-width: 80px;
-    margin: 16px;
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    background-color: rgba(253, 253, 253, 0.183);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 16px;
+
+    & h1 {
+      font-size: 5.2rem;
+      background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 0;
+      margin: 8px;
+    }
+
+    p {
+      text-align: center;
+      letter-spacing: 1.2mm;
+      text-transform: uppercase;
+      word-spacing: 2mm;
+      color: rgba(0, 0, 0, 0.66);
+    }
   }
 }
 

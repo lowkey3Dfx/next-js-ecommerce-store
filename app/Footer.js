@@ -60,7 +60,7 @@ export default function Footer() {
                   <a>Privacy Policy </a>
                 </li>
                 <li>
-                  <a>Suub-processors </a>
+                  <a>Sub-processors </a>
                 </li>
               </ul>
             </div>
