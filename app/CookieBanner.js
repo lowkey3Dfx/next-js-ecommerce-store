@@ -7,10 +7,8 @@ export default function CookieBanner() {
   const [areCookiesTermsAccepted, setAreCookiesTermsAccepted] = useState(false);
   // check if there is a localStorage field for the cookieBanner
 
-  // const localStorageValue = JSON.parse(
-  //   window.localStorage.getItem('areCookiesTermsAccepted'),
-  // );
   // If not then initial value is false
+
   // If yes the initial value is what is stored in the browser
   useEffect(() => {
     const localStorageValue = getLocalStorage('areCookiesTermsAccepted');
@@ -31,11 +29,6 @@ export default function CookieBanner() {
             onClick={() => {
               setAreCookiesTermsAccepted(true);
               setLocalStorage('areCookiesTermsAccepted', true);
-
-              // window.localStorage.setItem(
-              //   'areCookiesTermsAccepted',
-              //   JSON.stringify(true),
-              // );
             }}
           >
             Accept Cookies

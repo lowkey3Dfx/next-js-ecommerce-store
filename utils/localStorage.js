@@ -1,5 +1,4 @@
-// more robust way to get items from local storage
-// this is a wrapper- function that will improve the performance on another function
+// more robust way to get items from localStorage
 export function getLocalStorage(key) {
   try {
     return JSON.parse(window.localStorage.getItem(key));
@@ -8,6 +7,7 @@ export function getLocalStorage(key) {
   }
 }
 
+// more robust way to set items to localStorage
 export function setLocalStorage(key, value) {
   // if we are in the browser
   if (typeof window !== 'undefined') {
