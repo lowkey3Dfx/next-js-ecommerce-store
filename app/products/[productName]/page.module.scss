@@ -35,6 +35,7 @@
 
     h2 {
       padding-left: 8px;
+      margin: 4px 0 4px 0;
       font-size: 2rem;
       font-weight: 700;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -55,18 +56,21 @@
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif;
       padding: 4px;
+      margin-top: 40px;
     }
 
     p {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif;
-      font-weight: 300;
-      font-size: 0.9rem;
+
+      font-weight: 400;
+
+      font-size: 0.86rem;
       text-align: left;
-      padding: 4px;
-      margin-bottom: auto;
-      color: black;
+      padding: 6px;
+      margin-bottom: 12px;
+      color: rgb(33, 33, 33);
     }
   }
 }
@@ -97,4 +101,90 @@
     max-height: 528px;
     border-radius: 8px;
   }
+}
+
+.addToCartComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: auto;
+  max-height: 128px;
+  margin: 10px 0 0 0;
+  padding: 8px;
+  gap: 4px;
+  background-color: #38369a58;
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+
+  .h3Header {
+    margin-right: 66px;
+
+    & h3 {
+      color: rgb(36, 36, 36);
+      font-size: 0.9rem;
+      margin: 0;
+
+      font-weight: 200;
+    }
+  }
+
+  .counter {
+    display: flex;
+
+    & input {
+      background-color: #ffffff;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      margin: 2px;
+      padding: 4px;
+    }
+
+    & button {
+      background-color: #ffffff;
+      border-radius: 4px;
+      border: 2px solid white;
+      color: #38369a;
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 2px;
+      padding: 4px;
+      width: 40px;
+      height: 40px;
+    }
+    & button:hover {
+      cursor: pointer;
+
+      border: 2px solid #38369a;
+    }
+  }
+
+  .addToCart {
+    & button {
+      color: white;
+      border: none;
+      border-radius: 4px;
+      width: 128px;
+      height: 40px;
+      font-size: 1rem;
+      background-color: #38369a;
+      text-align: center;
+
+      margin: 2px;
+      padding: 4px;
+    }
+
+    & button:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.testClass {
+  margin-top: 80px;
+  color: rgb(244, 6, 6);
+  font-size: 30px;
 }
