@@ -51,7 +51,31 @@ export default function Product(props) {
               <button
                 onClick={() => {
                   // set count inside input field
-                  setCount(count - 1);
+                  if (count === 0) {
+                    setCount(0);
+                  } else {
+                    setCount(count - 1);
+                  }
+                  const productsInCookies = getParsedCookie('productCookie');
+                  if (!productsInCookies) {
+                    return;
+                  }
+                  const foundProduct = productsInCookies.find(
+                    (productInCookie) => {
+                      return productInCookie.id === props.propItem.id;
+                    },
+                  );
+                  // product is inside of cookie
+                  if (foundProduct) {
+                    foundProduct.amount--;
+                    if (foundProduct.amount < 0) {
+                      foundProduct.amount = 0;
+                    } else {
+                      setStringifiedCookie('productCookie', productsInCookies);
+                    }
+                    // my product in not inside the cookie
+                  }
+                  // update cookie with new value
                 }}
               >
                 {' '}
@@ -62,11 +86,23 @@ export default function Product(props) {
               <button
                 onClick={() => {
                   setCount(count + 1);
+                }}
+
+                // set count inside input field
+              >
+                {' '}
+                +{' '}
+              </button>
+            </div>
+            <div className={styles.addToCart}>
+              <button
+                onClick={() => {
+                  setCount(0);
                   const productsInCookies = getParsedCookie('productCookie');
                   // if there is no cookie we initialize the value  with 1
                   if (!productsInCookies) {
                     setStringifiedCookie('productCookie', [
-                      { id: props.propItem.id, amount: 1 },
+                      { id: props.propItem.id, amount: count },
                     ]);
 
                     // if there is no cookie function stop here
@@ -79,27 +115,19 @@ export default function Product(props) {
                   );
                   // product is inside of cookie
                   if (foundProduct) {
-                    foundProduct.amount++;
+                    foundProduct.amount = foundProduct.amount + count;
                     // my product in not inside the cookie
                   } else {
                     productsInCookies.push({
                       id: props.propItem.id,
-                      amount: 1,
+                      amount: count,
                     });
                   }
-
                   // update the cookie with new values
                   setStringifiedCookie('productCookie', productsInCookies);
                 }}
-
-                // set count inside input field
+                className={styles.addToCartButton}
               >
-                {' '}
-                +{' '}
-              </button>
-            </div>
-            <div className={styles.addToCart}>
-              <button onClick className={styles.addToCartButton}>
                 Add to Cart
               </button>
             </div>
