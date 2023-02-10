@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
 import { useState } from 'react';
 import { products } from '../../../database/products';
 import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
@@ -45,7 +44,7 @@ export default function Product(props) {
           </h3>
           <div className={styles.addToCartComponent}>
             <div className={styles.h3Header}>
-              <h3>Amount:</h3>
+              <h3>Amount: {props.propItem.amount}</h3>
             </div>
             <div className={styles.counter}>
               <button
