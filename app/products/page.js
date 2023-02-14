@@ -1,9 +1,10 @@
 import { cookies } from 'next/headers';
 import Link from 'next/link';
-import { products } from '../../database/products';
+import { getProducts } from '../../database/products';
 import styles from './page.module.scss';
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const products = await getProducts();
   const productCookie = cookies().get('productCookie');
   // created default value for productCookieParsed
   let productCookieParsed = [];
@@ -36,14 +37,14 @@ export default function ProductsPage() {
         {productsWithAmount.map((item) => {
           return (
             <div key={item.id} className={styles.productCard}>
-              <Link href={`/products/${item.product.toLowerCase()}`}>
+              <Link href={`/products/${item.id}`}>
                 <img
                   src={`/${item.product}-${item.id}.jpg`}
                   alt={item.accessory}
                   className={styles.imageCard}
                 />
               </Link>
-              <Link href={`/products/${item.product.toLowerCase()}`}>
+              <Link href={`/products/${item.id}`}>
                 <h2 key={item.id}>{item.product}</h2>
               </Link>
               <div className={styles.productCardAmount}>

@@ -1,7 +1,8 @@
+/* stylelint-disable-next-line CssSyntaxError */
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { products } from '../../../database/products';
+// import { products } from '../../../database/products';
 import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
 import styles from './page.module.scss';
 
@@ -22,7 +23,7 @@ export default function Product(props) {
         {props.propItem.solutionName} is the best solution for{' '}
         {props.propItem.accessory}
       </p>
-      <div className={styles.productContainer} key={products.id}>
+      <div className={styles.productContainer} key={props.propItem.id}>
         <div className={styles.productCard}>
           <Image
             src={`/${props.propItem.product}-${props.propItem.id}.jpg`}

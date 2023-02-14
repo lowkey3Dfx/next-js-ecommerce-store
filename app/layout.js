@@ -1,14 +1,15 @@
 import './global.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { products } from '../database/products';
+import { getProducts } from '../database/products';
 import homeIcon from '../public/Logo.png';
 import cartIcon from '../public/shopping-cart-icon.png';
 import CookieBanner from './CookieBanner';
 import Footer from './Footer';
 import styles from './layout.module.scss';
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const products = await getProducts();
   return (
     <html lang="en">
       <head className={styles.header} />
@@ -28,10 +29,7 @@ export default function RootLayout({ children }) {
               <Link href="/products">Solutions</Link>
               {products.map((item) => {
                 return (
-                  <Link
-                    key={item.id}
-                    href={`/products/${item.product.toLowerCase()}`}
-                  >
+                  <Link key={item.id} href={`/products/${item.id}`}>
                     {item.product}
                   </Link>
                 );

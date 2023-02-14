@@ -1,4 +1,7 @@
-export const products = [
+// import fs from 'node:fs';
+import { sql } from './connect';
+
+export const products1 = [
   {
     id: 1,
     product: 'Model',
@@ -56,3 +59,18 @@ export const products = [
     create promotional content. However you need to tell a great story.`,
   },
 ];
+
+export async function getProducts() {
+  const products = await sql`
+  SELECT * FROM products`;
+
+  return products;
+}
+
+export async function getSingleProduct(id) {
+  const [singleProduct] = await sql`
+  SELECT * FROM products WHERE id = ${id}
+
+  `;
+  return singleProduct;
+}
