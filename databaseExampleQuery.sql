@@ -8,7 +8,7 @@ CREATE TABLE products (
 
 -- inserting product
 INSERT INTO products
-(product, etc, etc)
+(product, price, accessory, solution_name, text_one, text_two)
 VALUES
 ('Model', '29', 'Prototyping', 'Modeling', 'Improvements in image capturing, modeling and
     computer vision will make VR and AR more efficient. These trends will help make 3D a critical part
