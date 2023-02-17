@@ -1,22 +1,22 @@
 /* stylelint-disable-next-line CssSyntaxError */
 'use client';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 // import { products } from '../../../database/products';
 import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
 import styles from './page.module.scss';
 
 export default function Product(props) {
-  console.log(props.propItem.id);
-  const [count, setCount] = useState(0);
+  // console.log(props.propItem.id);
+  const router = useRouter();
+  const [count, setCount] = useState(1);
 
   return (
     <div className={styles.singlePageProduct}>
       <h1>
-        {/* creating Product Name and capitalizing first letter */}
         {props.propItem.product.charAt(0).toUpperCase() +
           props.propItem.product.slice(1)}{' '}
-        your Product
       </h1>
 
       <p>
@@ -26,6 +26,7 @@ export default function Product(props) {
       <div className={styles.productContainer} key={props.propItem.id}>
         <div className={styles.productCard}>
           <Image
+            data-test-id="product-image"
             src={`/${props.propItem.product}-${props.propItem.id}.jpg`}
             alt={props.propItem.accessory}
             className={styles.imageCard}
@@ -35,12 +36,18 @@ export default function Product(props) {
         </div>
         <div className={styles.descriptionAndCounter}>
           <h2>
+            {/* creating Product Name and capitalizing first letter */}
             {props.propItem.product.charAt(0).toUpperCase() +
               props.propItem.product.slice(1)}{' '}
+            your Product
           </h2>
           <p>{props.propItem.textOne}</p>
           <p>{props.propItem.textTwo}</p>
-          <h3 className={styles.price} key={props.propItem.id}>
+          <h3
+            className={styles.price}
+            key={props.propItem.id}
+            data-test-id="product-price"
+          >
             {props.propItem.price}
           </h3>
           <div className={styles.addToCartComponent}>
@@ -81,11 +88,16 @@ export default function Product(props) {
                 {' '}
                 -{' '}
               </button>
-              <input placeholder="0" defaultValue={count} />
+              <input
+                placeholder="0"
+                defaultValue={count}
+                data-test-id="product-quantity"
+              />
 
               <button
                 onClick={() => {
                   setCount(count + 1);
+                  router.refresh();
                 }}
 
                 // set count inside input field
@@ -125,8 +137,10 @@ export default function Product(props) {
                   }
                   // update the cookie with new values
                   setStringifiedCookie('productCookie', productsInCookies);
+                  router.refresh();
                 }}
                 className={styles.addToCartButton}
+                data-test-id="product-add-to-cart"
               >
                 Add to Cart
               </button>

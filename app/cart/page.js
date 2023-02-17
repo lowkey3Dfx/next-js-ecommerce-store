@@ -1,15 +1,16 @@
-import '../global.scss';
-import { getParsedCookie, setStringifiedCookie } from '../../utils/cookies';
-import styles from './page.module.scss';
+import { getProducts } from '../../database/products';
+import Cart from './CartPage';
 
-export default function productsCart() {
-  return (
-    <div className={styles.cartPageContainer}>
-      <h1>Shopping Cart</h1>
-      <div className={styles.shoppingCartCard}>
-        <img src="/#" alt="Product inside cart" />
-      </div>
-      <div>{getParsedCookie('productCookie')}</div>
-    </div>
-  );
+export const metadata = {
+  title: 'Cart',
+  description: 'Cart Page where all the items in the cart are listed',
+};
+
+export const dynamic = 'force-dynamic';
+
+export default async function CartPage() {
+  const products = await getProducts();
+  // passing props from database
+  // console.log(products);
+  return <Cart products={products} />;
 }

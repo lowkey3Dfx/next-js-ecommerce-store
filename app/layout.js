@@ -14,7 +14,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <head className={styles.header} />
       <body className={styles.main}>
-        <header className={styles.header}>
+        <header className={styles.header} data-test-id="products-link">
           <nav>
             <div>
               <Link href="/">
@@ -29,7 +29,11 @@ export default async function RootLayout({ children }) {
               <Link href="/products">Solutions</Link>
               {products.map((item) => {
                 return (
-                  <Link key={item.id} href={`/products/${item.id}`}>
+                  <Link
+                    key={item.id}
+                    href={`/products/${item.id}`}
+                    data-test-id={`product-${item.id}`}
+                  >
                     {item.product}
                   </Link>
                 );
