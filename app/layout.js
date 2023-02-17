@@ -41,7 +41,7 @@ export default async function RootLayout({ children }) {
             </div>
 
             <div className={styles.cart}>
-              <Link href="/cart">
+              <Link href="/cart" data-test-id="cart-link">
                 <Image
                   src={cartIcon}
                   alt="Home Button"

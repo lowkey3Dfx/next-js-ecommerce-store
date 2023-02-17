@@ -10,6 +10,7 @@ import styles from './page.module.scss';
 export default function Product(props) {
   // console.log(props.propItem.id);
   const router = useRouter();
+
   const [count, setCount] = useState(1);
 
   return (
@@ -134,12 +135,12 @@ export default function Product(props) {
                       id: props.propItem.id,
                       amount: count,
                     });
+                    router.refresh();
                   }
                   // update the cookie with new values
                   setStringifiedCookie('productCookie', productsInCookies);
                   router.refresh();
                 }}
-                className={styles.addToCartButton}
                 data-test-id="product-add-to-cart"
               >
                 Add to Cart

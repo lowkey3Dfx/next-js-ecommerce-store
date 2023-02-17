@@ -51,7 +51,7 @@ export default function Cart({ products }) {
 
   return (
     <div className={styles.cartPageContainer}>
-      <h1>Shopping Cart</h1>
+      <h2>Your Solutions</h2>
       {productsWithAmounts.some((item) => item.amount > 0) ? (
         productsWithAmounts.map((item) => {
           if (item.amount > 0) {
@@ -76,13 +76,9 @@ export default function Cart({ products }) {
                       <h2>{item.product} your product</h2>
 
                       <p className={styles.price}>€ {item.price}</p>
-                      <div className={styles.amountDiv}>
-                        <p>Amount in cart: </p>
-                        <p data-test-id={`cart-product-quantity-${item.id}`}>
-                          {item.amount}
-                        </p>
-                      </div>
-
+                      <p data-test-id={`cart-product-quantity-${item.id}`}>
+                        Amount in cart: {item.amount}
+                      </p>
                       <button
                         data-test-id={`cart-product-remove${item.id}`}
                         className={styles.removeButton}
@@ -130,11 +126,6 @@ export default function Cart({ products }) {
               <p data-test-id="cart-total">
                 Total: € {runningSum().toFixed(2)}
               </p>
-              <Link href="checkout">
-                <button data-test-id="cart-checkout">
-                  Proceed to Checkout
-                </button>
-              </Link>
             </div>
           </div>
         </div>
