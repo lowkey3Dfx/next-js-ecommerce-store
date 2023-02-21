@@ -17,7 +17,7 @@ export default async function CheckoutPage() {
     <div className={styles.container}>
       <div className={styles.formContainer}>
         <div className={styles.formDiv}>
-          <h3>Checkout</h3>
+          <h2>Checkout</h2>
           <CheckoutForm />
         </div>
       </div>

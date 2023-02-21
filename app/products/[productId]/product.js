@@ -64,27 +64,31 @@ export default function Product(props) {
                   } else {
                     setCount(count - 1);
                   }
-                  const productsInCookies = getParsedCookie('productCookie');
-                  if (!productsInCookies) {
-                    return;
-                  }
-                  const foundProduct = productsInCookies.find(
-                    (productInCookie) => {
-                      return productInCookie.id === props.propItem.id;
-                    },
-                  );
-                  // product is inside of cookie
-                  if (foundProduct) {
-                    foundProduct.amount--;
-                    if (foundProduct.amount < 0) {
-                      foundProduct.amount = 0;
-                    } else {
-                      setStringifiedCookie('productCookie', productsInCookies);
-                    }
-                    // my product in not inside the cookie
-                  }
-                  // update cookie with new value
+
+                  router.refresh();
                 }}
+
+                //   const productsInCookies = getParsedCookie('productCookie');
+                //   if (!productsInCookies) {
+                //     return;
+                //   }
+                //   const foundProduct = productsInCookies.find(
+                //     (productInCookie) => {
+                //       return productInCookie.id === props.propItem.id;
+                //     },
+                //   );
+                //   // product is inside of cookie
+                //   if (foundProduct) {
+                //     foundProduct.amount--;
+                //     if (foundProduct.amount < 0) {
+                //       foundProduct.amount = 0;
+                //     } else {
+                //       setStringifiedCookie('productCookie', productsInCookies);
+                //     }
+                //     // my product in not inside the cookie
+                //   }
+                //   // update cookie with new value
+                // }}
               >
                 {' '}
                 -{' '}

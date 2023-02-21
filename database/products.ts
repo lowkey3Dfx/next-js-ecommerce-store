@@ -2,7 +2,7 @@
 import { cache } from 'react';
 import { sql } from './connect';
 
-type Product = {
+export type Product = {
   id: number;
   product: string;
   price: string;

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getProducts } from '../../database/products';
 import styles from './page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export default async function ProductsPage() {
   const products = await getProducts();
   const productCookie = cookies().get('productCookie');
@@ -35,8 +37,13 @@ export default async function ProductsPage() {
 
       <main className={styles.productCardContainer}>
         {productsWithAmount.map((item) => {
+          console.log(item);
           return (
-            <div key={item.id} className={styles.productCard}>
+            <div
+              key={item.id}
+              className={styles.productCard}
+              data-test-id={`product-type-${item.solutionName}`}
+            >
               <Link href={`/products/${item.id}`}>
                 <img
                   src={`/${item.product}-${item.id}.jpg`}
@@ -48,7 +55,7 @@ export default async function ProductsPage() {
                 <h2 key={item.id}>{item.product}</h2>
               </Link>
               <div className={styles.productCardAmount}>
-                <h2>Amount: {item.amount}</h2>
+                <h2>Learn more</h2>
               </div>
             </div>
           );

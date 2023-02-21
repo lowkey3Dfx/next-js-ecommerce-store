@@ -2,6 +2,8 @@ import Image from 'next/image';
 import logoWhite from '../public/Untitled_Artwork copy 2.png';
 import styles from './page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export default function Footer() {
   return (
     <section className={styles.sectionStyled}>

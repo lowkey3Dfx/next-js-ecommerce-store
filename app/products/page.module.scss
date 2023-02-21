@@ -26,10 +26,6 @@
 
 .productCard:hover {
   background-color: hsla(0, 0%, 100%, 0.904);
-
-  .productCardAmount {
-    background-color: #e7e7e7;
-  }
 }
 
 .imageCard {
@@ -65,9 +61,9 @@
   & h2 {
     text-align: center;
     margin: 0;
+    color: #38369a;
 
     font-size: 0.9rem;
     font-weight: 200;
-    color: #433a3f;
   }
 }

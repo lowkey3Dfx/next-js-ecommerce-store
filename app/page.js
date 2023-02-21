@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Logo from '../public/Logo.png';
 import styles from './page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export default function HomePage() {
   return (
     <main className={styles.mainBody}>

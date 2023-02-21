@@ -8,6 +8,8 @@ import CookieBanner from './CookieBanner';
 import Footer from './Footer';
 import styles from './layout.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export default async function RootLayout({ children }) {
   const products = await getProducts();
   return (

@@ -21,9 +21,7 @@ export default function CookieBanner() {
   return (
     !areCookiesTermsAccepted && (
       <div className={styles.cookieBanner}>
-        <p>
-          This is our Cookie policy 🍪, accept Cookies or get yourself busy.
-        </p>
+        <p>This is our Cookie policy 🍪.</p>
         <div>
           <button
             onClick={() => {

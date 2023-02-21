@@ -3,7 +3,7 @@ import styles from './page.module.scss';
 
 export default function CheckoutForm() {
   return (
-    <div>
+    <div className="styles.formDiv">
       <h3>Client Details</h3>
       <form method="POST" action="/thankyou" className={styles.form}>
         <label htmlFor="firstName">First Name</label>
