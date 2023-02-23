@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import products from '../database/products';
 import { getParsedCookie, setStringifiedCookie } from '../utils/cookies';
 import styles from './page.module.scss';
 

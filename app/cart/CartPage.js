@@ -15,7 +15,6 @@ export default function Cart({ products }) {
     const productsCookie = getParsedCookie('productCookie');
     const cookieState = productsCookie === undefined ? false : productsCookie;
     setProductsCookieValue(cookieState);
-    console.log(productsCookie);
   }, []);
   // get cookies value, if cookies value does not exist state will be false
 
